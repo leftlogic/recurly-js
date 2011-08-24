@@ -1071,17 +1071,17 @@ function initCommonForm($form, options) {
 
 
   $form.delegate('input', 'focus', function() {
-    $form.parent().addClass('focus');
+    $(this).parent().addClass('focus');
   });
 
   $form.delegate('input', 'blur', function() {
-    $form.parent().removeClass('focus');
+    $(this).parent().removeClass('focus');
   });
 
   // Touch of perfection
   $form.delegate('input', 'keydown', function(e) {
     if(e.keyCode >= 48 && e.keyCode <= 90) {
-      $form.parent().find('.placeholder').hide();
+      $(this).parent().find('.placeholder').hide();
     }
   });
   
